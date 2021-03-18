@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Rochester&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0%;
+  padding: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Ubuntu", sans-serif;
+  /* background-color: #e5e5e5; */
+  background-color: #f0f8ff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
+  max-width: 1440px;
+  margin: auto;
+}
+.header h4 {
+  font-family: Rochester;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 64px;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+.search {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 80px;
+  margin-top: 10px;
+}
+.search form {
+  display: flex;
+}
+.search form input {
+  width: 480px;
+  height: 60px;
+  background: #ff7878;
+  color: #2d2d2d;
+  border: none;
+  border-radius: 10px;
+  margin-right: 20px;
+  font-size: 1.75rem;
+  text-align: center;
+  font-family: "Ubuntu";
+}
+.search form input,
+button:focus {
+  outline: none;
+}
+.search form input::placeholder {
+  color: #3a3a3a;
+}
+.search form button:hover {
+  transition: 0.5s ease all;
+  background-color: #4ece34;
+}
+.search form button {
+  width: 60px;
+  height: 60px;
+  background: #65e04d;
+  border-radius: 5px;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.cart-container {
+  max-width: 1300px;
+  background: linear-gradient(180deg, #e6ffed 0%, #a0fad9 53.12%, #dfcffa 100%);
+  border: 1px solid #cfcfcf;
+  box-sizing: border-box;
+  border-radius: 8px;
+  min-height: 680px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cart-body {
+  background: rgba(239, 241, 255, 0.81);
+  border-radius: 10px;
+  width: 160px;
+  height: 235px;
+  margin: 30px 0px 30px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(180, 180, 180);
+}
+.poster {
+  background: #f9f9f9;
+  border: 1px solid #adadad;
+  box-sizing: border-box;
+  border-radius: 8px 8px 0px 0px;
+
+  width: 150px;
+  height: 170px;
+}
+.poster img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0px 0px;
+}
+.title {
+  background: #f9f9f9;
+  border: 1px solid #adadad;
+  box-sizing: border-box;
+  border-radius: 0px 0px 8px 8px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+
+  width: 150px;
+  height: 55px;
+}
+.title a {
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-family: ubuntu;
+  color: rgb(32, 32, 32);
+  font-weight: 350;
+}
+.title a:hover {
+  color: rebeccapurple;
+  font-size: 1.02rem;
+  transition: 0.5s ease all;
+}
+/* Details Css */
+.flexBox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.back-button button {
+  background-color: #ff7878;
+  width: 119px;
+  height: 20px;
+  box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  float: right;
+  cursor: pointer;
+}
+.back-button button:hover {
+  transition: 0.5s ease all;
+  background-color: rgb(245, 61, 76);
+}
+.cover {
+  margin-left: 60px;
+  margin-top: 60px;
+  width: 401px;
+  height: 460px;
+  background: #fdfdfd;
+  border: 1px solid #cfcfcf;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cover img {
+  width: 99%;
+  height: 99%;
+  border-radius: 8px;
+}
+.info {
+  width: 690px;
+  margin-top: 60px;
+  margin-left: 80px;
+  margin-right: 60px;
+}
+.plot {
+  margin-left: 60px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.info {
+  font-size: 18px;
+  color: #2d2d2d;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.info {
+  font-size: 18px;
+  color: #2d2d2d;
+}
+.info .big-title {
+  color: #161c4d;
+  font-size: 50px;
+}
+.info p {
+  margin-bottom: 10px;
+  color: #2d2d2d;
+}
+@media (max-width: 540px) {
+  /* For mobile phones: */
+  .search form input {
+    width: 90%;
+    height: 50px;
   }
-  to {
-    transform: rotate(360deg);
+  .search form button {
+    height: 50px;
+  }
+  .search form {
+    margin: 0 10px;
+  }
+  .cart-container {
+    margin: 0 10px;
+  }
+  .header h4 {
+    text-align: center;
+    margin-bottom: 30px;
   }
 }
