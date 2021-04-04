@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import noImage from '../images/noImage.png';
 import { Grid } from '@material-ui/core'
+import { motion } from 'framer-motion';
 
 function Home() {
 
@@ -39,17 +40,31 @@ function Home() {
 
 
     return (
-        <div className="main-container">
+        <motion.div className="main-container"
+            initial={{ opacity: 0, y: -20,  }}
+            animate={{ opacity: 1,  y: +20  }}
+            transition={{ delay: .4 }}
+        >
             <div className="header">
-                <h4>Moviefie</h4>
+                <motion.h4
+                    initial={{ opacity: 0, y: -20  }}
+                    animate={{ opacity: 1,  y:+20  }}
+                    transition={{ delay: .5, type:'spring', stiffness: 500 }}
+                >
+                    Moviefie
+                </motion.h4>
             </div>
-            <div className="search">
+            <motion.div className="search"
+                initial={{ opacity: 0,  y: 40, scale: 0.92  }}
+                animate={{ opacity: 1,  y: 20, scale: 1 }}
+                transition={{ delay: .5, type:'spring', stiffness: 150 }}
+            >
                 <form onSubmit={submitHandler}>
-                    <input placeholder="Search here" value={input} onChange={inputHander} type="text"/>
-                    <button> <i class="fas fa-search"></i></button>
+                    <motion.input transition={{ type:'tween', stiffness: 1500 }} whileHover={{ scale: 1.03 }} placeholder="Search here" value={input} onChange={inputHander} type="text"/>
+                    <motion.button transition={{ type:'transition', stiffness: 200 }} > <i class="fas fa-search"></i></motion.button>
                    
                 </form>
-            </div>
+            </motion.div>
             <Grid style={{width:"100%"}} justify="center" container spacing={2}>
                 { fetchedData && 
                     fetchedData.map((item)=>{
@@ -75,7 +90,7 @@ function Home() {
             <div className="footer">
                copyright &copy; Shamim Bin Nur
             </div>
-        </div>
+        </motion.div>
     )
 }
 
