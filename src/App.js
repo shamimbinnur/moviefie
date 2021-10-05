@@ -1,3 +1,9 @@
+// 	AUTHOR:		SHAMIM BIN NUR
+// 	GITHUB:		https://github.com/shamimbinnur
+// 	LINKEDIN:	https://www.linkedin.com/in/shamimbinnur
+// 	MAIL:		iamshamimbn@gmail.com
+// 	SITE:		www.shamimbinnur.me
+
 import './App.css';
 import Home from "./pages/Home" 
 import Details from "./pages/Details"
